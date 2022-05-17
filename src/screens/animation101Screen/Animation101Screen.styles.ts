@@ -10,6 +10,9 @@ export const styles = StyleSheet.create({
     width: 150,
     height: 150,
     backgroundColor: '#5856D6',
-		borderRadius: 10
+    borderRadius: 10,
+  },
+  button: {
+    marginTop: 20,
   },
 });
