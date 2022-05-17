@@ -7,7 +7,11 @@ import { useNavigation } from '@react-navigation/native';
 import { styles } from './MenuItem.styles';
 import { MenuItemModel } from '../../models/MenuItem.model';
 
-const MenuItem = ({ name, icon, screenName }: MenuItemModel) => {
+interface MenuItemProps {
+  menuItem: MenuItemModel;
+}
+
+const MenuItem = ({ menuItem: { icon, name, screenName } }: MenuItemProps) => {
   const { navigate } = useNavigation();
 
   const handleOnTap = () => {

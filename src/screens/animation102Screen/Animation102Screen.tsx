@@ -16,17 +16,16 @@ const Animation102Screen = () => {
           y: parseInt(pan.y.addListener(value => value.value)),
         });
       },
-      onPanResponderMove: (e, gestureState) =>
-        Animated.event(
-          [
-            null,
-            {
-              dx: pan.x,
-              dy: pan.y,
-            },
-          ],
-          { useNativeDriver: true },
-        )(e, gestureState),
+      onPanResponderMove: Animated.event(
+        [
+          null,
+          {
+            dx: pan.x,
+            dy: pan.y,
+          },
+        ],
+        { useNativeDriver: true },
+      ),
       onPanResponderRelease: () => {
         pan.flattenOffset();
       },
@@ -42,7 +41,8 @@ const Animation102Screen = () => {
             transform: pan.getTranslateTransform(),
           },
         ]}
-        {...panResponder.panHandlers}></Animated.View>
+        {...panResponder.panHandlers}
+      />
     </View>
   );
 };
