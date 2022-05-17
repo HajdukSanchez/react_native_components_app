@@ -1,35 +1,36 @@
-import React, { useRef, useState } from 'react';
-import { View, Animated, Button, Easing } from 'react-native';
+import React, { useState } from 'react';
+import { View, Animated, Button } from 'react-native';
 
+import { useAnimation } from '../../hooks';
 import { styles } from './Animation101Screen.styles';
 
 const Animation101Screen = () => {
   const [showBox, setShowBox] = useState(false);
-  const opacity = useRef(new Animated.Value(0)).current;
-  const top = useRef(new Animated.Value(-100)).current;
+  const { opacity, position, fadeIn, fadeOut, movePosition } = useAnimation();
 
-  const fadeIn = () => {
-    // The callback in the start is a fuction to we running when the animation is done.
-    Animated.timing(opacity, { toValue: 1, duration: 300, useNativeDriver: true }).start(() => setShowBox(true));
-    Animated.timing(top, { toValue: 0, duration: 1000, useNativeDriver: true, easing: Easing.bounce }).start();
+  const handleShowBox = () => {
+    fadeIn();
+    movePosition(-100, 0, 1000);
+    setShowBox(true);
   };
 
-  const fadeOut = () => {
-    Animated.timing(opacity, { toValue: 0, duration: 800, useNativeDriver: true }).start(() => setShowBox(false));
-    Animated.timing(top, { toValue: -100, duration: 1000, useNativeDriver: true, easing: Easing.bounce }).start();
+  const handleHideBox = () => {
+    fadeOut(800);
+    movePosition(0, -100, 1000);
+    setShowBox(false);
   };
 
   return (
     <View style={styles.container}>
-      <Animated.View style={{ ...styles.box, opacity: opacity, transform: [{ translateY: top }] }} />
+      <Animated.View style={{ ...styles.box, opacity: opacity, transform: [{ translateY: position }] }} />
       {!showBox && (
         <View style={styles.button}>
-          <Button title="Fade IN" onPress={fadeIn} />
+          <Button title="Show Box" onPress={handleShowBox} />
         </View>
       )}
       {showBox && (
         <View style={styles.button}>
-          <Button title="Fade OUT" onPress={fadeOut} />
+          <Button title="Hide Box" onPress={handleHideBox} />
         </View>
       )}
     </View>
