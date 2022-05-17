@@ -5,6 +5,10 @@ export const globalStyles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-		marginHorizontal: 20,
+    marginHorizontal: 20,
+  },
+  text: {
+    fontSize: 20,
+    color: 'black',
   },
 });

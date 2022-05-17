@@ -1,23 +1,31 @@
 import React, { useState } from 'react';
-import { Switch, View } from 'react-native';
+import { View, Text } from 'react-native';
 
 import { styles } from './SwitchScreen.styles';
-import { HeaderTitle } from '../../components';
+import { CustomSwitch, HeaderTitle } from '../../components';
 
 const SwitchScreen = () => {
-  const [isEnabled, setIsEnabled] = useState(false);
+  const [switchData, setSwitchData] = useState({
+    isActive: true,
+    isHungry: false,
+    isHappy: true,
+  });
 
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+  // Keyof Typeof allow us to send only values named equals to the key of the object.
+  const onChange = (value: boolean, field: keyof typeof switchData) => {
+    setSwitchData({
+      ...switchData,
+      [field]: value,
+    });
+  };
 
   return (
     <View style={styles.container}>
       <HeaderTitle title="Switches" />
-        <Switch
-          trackColor={{ false: '#D9D9DB', true: '#81b0ff' }}
-          thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
-          onValueChange={toggleSwitch}
-          value={isEnabled}
-        />
+      <CustomSwitch isOn={switchData.isActive} text="isActive" onChange={value => onChange(value, 'isActive')} />
+      <CustomSwitch isOn={switchData.isHungry} text="isHungry" onChange={value => onChange(value, 'isHungry')} />
+      <CustomSwitch isOn={switchData.isHappy} text="isHappy" onChange={value => onChange(value, 'isHappy')} />
+      <Text style={styles.text}>{JSON.stringify(switchData, null, 5)}</Text>
     </View>
   );
 };

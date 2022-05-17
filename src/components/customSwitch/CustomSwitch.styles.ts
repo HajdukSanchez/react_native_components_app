@@ -1,15 +1,15 @@
 import { StyleSheet } from 'react-native';
-
 import { globalStyles } from '../../styles/styles';
 
 export const styles = StyleSheet.create({
   container: {
-    ...globalStyles.container,
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+		marginBottom: 20
   },
   text: {
     ...globalStyles.text,
-    marginTop: 20,
+		marginRight: 20
   },
 });
