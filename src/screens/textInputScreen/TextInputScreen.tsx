@@ -2,20 +2,19 @@ import React, { useState } from 'react';
 import { TextInput, View, Text, KeyboardAvoidingView, Platform, ScrollView, TouchableWithoutFeedback, Keyboard } from 'react-native';
 
 import { styles } from './TextInputScreen.styles';
-import { HeaderTitle } from '../../components';
+import { CustomSwitch, HeaderTitle } from '../../components';
+import { useForm } from '../../hooks/useForm';
 
 const TextInputScreen = () => {
-  const [form, setForm] = useState({
+  const { form, onChange } = useForm({
     name: '',
     email: '',
     phone: '',
+    isSusbscribed: false,
   });
 
   const handleInputChange = (value: string, field: keyof typeof form) => {
-    setForm({
-      ...form,
-      [field]: value,
-    });
+    onChange(value, field);
   };
 
   return (
@@ -47,6 +46,7 @@ const TextInputScreen = () => {
               onChangeText={value => handleInputChange(value, 'phone')}
               keyboardType="phone-pad"
             />
+            <CustomSwitch isOn={form.isSusbscribed} text="Suscribe" onChange={value => onChange(value, 'isSusbscribed')} />
             <Text style={styles.text}>{JSON.stringify(form, null, 4)}</Text>
           </View>
         </TouchableWithoutFeedback>
