@@ -4,6 +4,7 @@ const ScreenNames = {
   Animation102: 'Animation102Screen',
   Switch: 'SwitchScreen',
   Alert: 'AlertScreen',
+  TextInput: 'TextInputScreen',
 };
 
 export { ScreenNames };
