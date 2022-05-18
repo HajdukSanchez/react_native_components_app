@@ -1,7 +1,10 @@
 import React from 'react';
 import { View, Button, Alert } from 'react-native';
-import { HeaderTitle } from '../../components';
+
+import prompt from 'react-native-prompt-android';
+
 import { styles } from './AlertScreen.styles';
+import { HeaderTitle } from '../../components';
 
 const AlertScreen = () => {
   const handleShowAlert = () => {
@@ -28,10 +31,20 @@ const AlertScreen = () => {
     );
   };
 
+  const handleShowPrompt = () => {
+    prompt('Enter password', 'Enter your password to claim your $1.5B in lottery winnings', [{ text: 'Cancel', style: 'cancel' }, { text: 'OK' }], {
+      type: 'secure-text',
+      cancelable: false,
+      defaultValue: 'test',
+    });
+  };
+
   return (
     <View style={styles.container}>
       <HeaderTitle title="Alerts" />
       <Button title="Show alert" onPress={handleShowAlert} />
+      <View style={{ height: 20 }} />
+      <Button title="Show prompt" onPress={handleShowPrompt} />
     </View>
   );
 };
