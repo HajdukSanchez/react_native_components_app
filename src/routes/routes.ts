@@ -8,6 +8,7 @@ const ScreenNames = {
   PullToRefresh: 'PullToRefreshScreen',
   SectionList: 'SectionListScreen',
   Modal: 'ModalScreen',
+  Scroll: 'ScrollScreen',
 };
 
 export { ScreenNames };

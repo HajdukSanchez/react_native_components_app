@@ -5,7 +5,7 @@ import { styles } from './ModalScreen.styles';
 import { HeaderTitle } from '../../components';
 
 const ModalScreen = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   const handleToggleModal = () => setShowModal(!showModal);
 

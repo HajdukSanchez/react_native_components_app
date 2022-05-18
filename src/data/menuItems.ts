@@ -10,4 +10,5 @@ export const menuItems: MenuItemModel[] = [
   { name: 'Pull to refresh', icon: 'refresh-outline', screenName: ScreenNames.PullToRefresh },
   { name: 'Section List', icon: 'list-outline', screenName: ScreenNames.SectionList },
   { name: 'Modals', icon: 'copy-outline', screenName: ScreenNames.Modal },
+  { name: 'Infinite Scroll', icon: 'download-outline', screenName: ScreenNames.Scroll },
 ];
