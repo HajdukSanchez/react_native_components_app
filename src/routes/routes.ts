@@ -6,6 +6,7 @@ const ScreenNames = {
   Alert: 'AlertScreen',
   TextInput: 'TextInputScreen',
   PullToRefresh: 'PullToRefreshScreen',
+  SectionList: 'SectionListScreen',
 };
 
 export { ScreenNames };

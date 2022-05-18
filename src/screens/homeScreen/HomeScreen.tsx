@@ -20,8 +20,6 @@ const HomeScreen = () => {
   );
 };
 
-const _ItemSeparator = () => {
-  return <View style={styles.itemSeparator} />;
-};
+const _ItemSeparator = () => <View style={styles.itemSeparator} />;
 
 export { HomeScreen };

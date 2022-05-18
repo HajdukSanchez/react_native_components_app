@@ -8,4 +8,5 @@ export const menuItems: MenuItemModel[] = [
   { name: 'Alert', icon: 'alert-circle-outline', screenName: ScreenNames.Alert },
   { name: 'Text Input', icon: 'document-text-outline', screenName: ScreenNames.TextInput },
   { name: 'Pull to refresh', icon: 'refresh-outline', screenName: ScreenNames.PullToRefresh },
+  { name: 'Section List', icon: 'list-outline', screenName: ScreenNames.SectionList },
 ];
