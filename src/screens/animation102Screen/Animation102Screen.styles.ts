@@ -5,6 +5,7 @@ import { globalStyles } from '../../styles/styles';
 export const styles = StyleSheet.create({
   container: {
     ...globalStyles.container,
+    ...globalStyles.containerCenter,
   },
   box: {
     width: 150,

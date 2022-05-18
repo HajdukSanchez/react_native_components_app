@@ -5,6 +5,7 @@ const ScreenNames = {
   Switch: 'SwitchScreen',
   Alert: 'AlertScreen',
   TextInput: 'TextInputScreen',
+  PullToRefresh: 'PullToRefreshScreen',
 };
 
 export { ScreenNames };

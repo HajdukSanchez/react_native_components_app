@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native';
-import { globalStyles } from '../../styles/styles';
 
 export const styles = StyleSheet.create({
   container: {
-    ...globalStyles.container,
+    flex: 1,
+    marginHorizontal: 20,
   },
 });

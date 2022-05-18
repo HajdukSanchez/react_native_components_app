@@ -7,4 +7,5 @@ export const menuItems: MenuItemModel[] = [
   { name: 'Switch', icon: 'toggle-outline', screenName: ScreenNames.Switch },
   { name: 'Alert', icon: 'alert-circle-outline', screenName: ScreenNames.Alert },
   { name: 'Text Input', icon: 'document-text-outline', screenName: ScreenNames.TextInput },
+  { name: 'Pull to refresh', icon: 'refresh-outline', screenName: ScreenNames.PullToRefresh },
 ];

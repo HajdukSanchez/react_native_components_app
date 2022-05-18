@@ -3,8 +3,7 @@ import { globalStyles } from '../../styles/styles';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    marginHorizontal: 20,
+    ...globalStyles.container,
   },
   textInput: {
     marginBottom: 15,
@@ -17,6 +16,6 @@ export const styles = StyleSheet.create({
   },
   text: {
     ...globalStyles.text,
-		marginTop: 20 
+    marginTop: 20,
   },
 });

@@ -3,7 +3,7 @@ import React from 'react';
 import { createStackNavigator, StackNavigationOptions } from '@react-navigation/stack';
 
 import { ScreenNames } from '../../routes/routes';
-import { AlertScreen, Animation101Screen, Animation102Screen, HomeScreen, SwitchScreen, TextInputScreen } from '../../screens';
+import { AlertScreen, Animation101Screen, Animation102Screen, HomeScreen, PullToRefreshScreen, SwitchScreen, TextInputScreen } from '../../screens';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -16,6 +16,7 @@ const StackNavigator = () => {
       <Screen name={ScreenNames.TextInput} component={TextInputScreen} />
       <Screen name={ScreenNames.Animation101} component={Animation101Screen} />
       <Screen name={ScreenNames.Animation102} component={Animation102Screen} />
+      <Screen name={ScreenNames.PullToRefresh} component={PullToRefreshScreen} />
     </Navigator>
   );
 };
