@@ -8,6 +8,7 @@ import {
   Animation101Screen,
   Animation102Screen,
   HomeScreen,
+  ModalScreen,
   PullToRefreshScreen,
   SectionListScreen,
   SwitchScreen,
@@ -21,6 +22,7 @@ const StackNavigator = () => {
     <Navigator screenOptions={_screenOptions}>
       <Screen name={ScreenNames.Home} component={HomeScreen} />
       <Screen name={ScreenNames.Alert} component={AlertScreen} />
+      <Screen name={ScreenNames.Modal} component={ModalScreen} />
       <Screen name={ScreenNames.Switch} component={SwitchScreen} />
       <Screen name={ScreenNames.TextInput} component={TextInputScreen} />
       <Screen name={ScreenNames.SectionList} component={SectionListScreen} />

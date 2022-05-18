@@ -7,6 +7,7 @@ const ScreenNames = {
   TextInput: 'TextInputScreen',
   PullToRefresh: 'PullToRefreshScreen',
   SectionList: 'SectionListScreen',
+  Modal: 'ModalScreen',
 };
 
 export { ScreenNames };

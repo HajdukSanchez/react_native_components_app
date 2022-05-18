@@ -6,13 +6,14 @@ import { styles } from './HeaderTitle.styles';
 
 interface HeaderTitleProps {
   title: string;
+  withTop?: boolean;
 }
 
-const HeaderTitle = ({ title }: HeaderTitleProps) => {
+const HeaderTitle = ({ title, withTop = true }: HeaderTitleProps) => {
   const { top: marginTop } = useSafeAreaInsets();
 
   return (
-    <View style={{ marginTop: marginTop + 20, ...styles.header }}>
+    <View style={{ marginTop: withTop ? marginTop + 20 : 0, ...styles.header }}>
       <Text style={styles.headerText}>{title}</Text>
     </View>
   );

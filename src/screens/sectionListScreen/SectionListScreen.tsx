@@ -15,7 +15,7 @@ const SectionListScreen = () => {
         renderSectionHeader={({ section: { title } }) => _SectionHeader(title)}
         renderSectionFooter={({ section: { data } }) => _SectionFooter(data.length)}
         stickySectionHeadersEnabled
-        ListHeaderComponent={<HeaderTitle title="Section list" />}
+        ListHeaderComponent={<HeaderTitle title="Section list" withTop={false} />}
         ListFooterComponent={<HeaderTitle title={`Total Sections: ${houses.length}`} />}
       />
     </View>

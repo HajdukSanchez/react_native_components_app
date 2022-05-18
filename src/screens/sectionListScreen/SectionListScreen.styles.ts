@@ -7,7 +7,7 @@ import { globalStyles } from '../../styles/styles';
 export const styles = StyleSheet.create({
   container: {
     ...globalStyles.container,
-    marginTop: 30,
+    marginTop: 60,
   },
   text: {
     ...globalStyles.text,
