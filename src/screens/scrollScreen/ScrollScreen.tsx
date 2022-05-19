@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, FlatList, Text } from 'react-native';
+import { View, FlatList, Text, Image, ActivityIndicator } from 'react-native';
 
 import { HeaderTitle } from '../../components';
 import { styles } from './ScrollScreen.styles';
@@ -12,7 +12,9 @@ const ScrollScreen = () => {
     for (let index = 0; index < numbers.length; index++) {
       newArray[index] = numbers.length + 1 + index;
     }
-    setNumbers([...numbers, ...newArray]);
+    setTimeout(() => {
+      setNumbers([...numbers, ...newArray]);
+    }, 1500);
   };
 
   return (
@@ -24,6 +26,7 @@ const ScrollScreen = () => {
         ListHeaderComponent={<HeaderTitle title="Infinite scroll" />}
         onEndReached={loadMore}
         onEndReachedThreshold={0.5}
+        ListFooterComponent={<_LoadingFooter />}
       />
     </View>
   );
@@ -31,8 +34,16 @@ const ScrollScreen = () => {
 
 const _RenderItem = (item: number) => {
   return (
-    <View style={styles.item}>
-      <Text style={styles.itemText}>{item}</Text>
+    <View style={styles.imageContainer}>
+      <Image source={{ uri: `https://picsum.photos/id/${item}/500/400` }} style={styles.image} />
+    </View>
+  );
+};
+
+const _LoadingFooter = () => {
+  return (
+    <View style={styles.loading}>
+      <ActivityIndicator size={20} color={'grey'} />
     </View>
   );
 };
