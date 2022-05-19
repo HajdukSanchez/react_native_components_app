@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, FlatList, Text, Image, ActivityIndicator } from 'react-native';
+import { View, FlatList, ActivityIndicator } from 'react-native';
 
 import { FadeInImage, HeaderTitle } from '../../components';
 import { styles } from './ScrollScreen.styles';
@@ -33,7 +33,14 @@ const ScrollScreen = () => {
 };
 
 const _RenderItem = (item: number) => {
-  return <FadeInImage uri={`https://picsum.photos/id/${item}/500/400`} />;
+  return (
+    <FadeInImage
+      uri={`https://picsum.photos/id/${item}/500/400`}
+      viewStyle={{ width: '100%', height: 400, marginBottom: 20 }}
+      imageStyle={{ width: '100%', height: '100%', borderRadius: 10 }}
+      loadingColor={'black'}
+    />
+  );
 };
 
 const _LoadingFooter = () => {
