@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Dimensions, SafeAreaView, View, Image, Text } from 'react-native';
 
-import Carousel from 'react-native-snap-carousel';
+import Carousel, { Pagination } from 'react-native-snap-carousel';
 
 import { styles } from './SlideScreen.styles';
 import { HeaderTitle } from '../../components';
@@ -9,18 +9,27 @@ import { Slide } from '../../models/slide.model';
 import { items } from '../../data/slideShow.data';
 
 const SlideScreen = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
   const { width } = useRef(Dimensions.get('window')).current;
+
+  const handleItemChange = (index: number) => {
+    setActiveIndex(index);
+  };
 
   return (
     <SafeAreaView style={styles.container}>
-      <HeaderTitle title="Slide Sreen" />
+      <View style={styles.containerTitle}>
+        <HeaderTitle title="Slide Sreen" />
+      </View>
       <Carousel
         data={items}
-        renderItem={({ item }) => <_SlideItem item={item} />}
-        sliderWidth={width - styles.container.marginHorizontal * 2}
-        itemWidth={width - styles.container.marginHorizontal * 2}
+        sliderWidth={width}
+        itemWidth={width}
         layout={'default'}
+        onSnapToItem={index => handleItemChange(index)}
+        renderItem={({ item }) => <_SlideItem item={item} />}
       />
+      <Pagination dotsLength={items.length} activeDotIndex={activeIndex} dotStyle={styles.dot} inactiveDotStyle={styles.dotInactive} />
     </SafeAreaView>
   );
 };
@@ -34,7 +43,7 @@ const _SlideItem = ({ item }: SlideItemProps) => {
     <View style={styles.imageContainer}>
       <Image source={item.image} style={styles.image} />
       <Text style={styles.title}>{item.title}</Text>
-      <Text style={styles.dscription}>{item.description}</Text>
+      <Text style={styles.description}>{item.description}</Text>
     </View>
   );
 };

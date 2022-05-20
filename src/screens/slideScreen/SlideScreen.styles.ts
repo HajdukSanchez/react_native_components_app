@@ -3,28 +3,39 @@ import { globalStyles } from '../../styles/styles';
 
 export const styles = StyleSheet.create({
   container: {
-    ...globalStyles.container,
+    flex: 1,
   },
-  text: {
-    ...globalStyles.text,
-    textAlign: 'justify',
+  containerTitle: {
+    marginHorizontal: 20,
   },
-  title: {
-    ...globalStyles.text,
-    fontSize: 25,
-    fontWeight: 'bold',
+  dot: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: '#5856D6',
   },
-  dscription: {
-    fontSize: 20,
-    color: 'grey',
+	dotInactive: {
+		backgroundColor: '#BDBDBD',
+	},
+  imageContainer: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    padding: 40,
   },
   image: {
     width: 350,
     height: 400,
-    resizeMode: 'contain',
+    resizeMode: 'center',
   },
-  imageContainer: {
-    justifyContent: 'flex-start',
-    flex: 1,
+  title: {
+		marginBottom: 10,
+    fontSize: 30,
+    color: '#5856D6',
+    fontWeight: 'bold',
+  },
+  description: {
+    ...globalStyles.text,
+    fontSize: 20,
+    textAlign: 'justify',
   },
 });
