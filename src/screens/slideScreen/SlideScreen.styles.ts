@@ -14,9 +14,9 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     backgroundColor: '#5856D6',
   },
-	dotInactive: {
-		backgroundColor: '#BDBDBD',
-	},
+  dotInactive: {
+    backgroundColor: '#BDBDBD',
+  },
   imageContainer: {
     flex: 1,
     justifyContent: 'flex-start',
@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
     resizeMode: 'center',
   },
   title: {
-		marginBottom: 10,
+    marginBottom: 10,
     fontSize: 30,
     color: '#5856D6',
     fontWeight: 'bold',
@@ -37,5 +37,18 @@ export const styles = StyleSheet.create({
     ...globalStyles.text,
     fontSize: 20,
     textAlign: 'justify',
+  },
+  button: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#5856D6',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+  },
+  buttonText: {
+		fontSize: 20,
+		marginRight: 10,
+    color: 'white',
   },
 });
