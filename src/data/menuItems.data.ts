@@ -12,4 +12,5 @@ export const menuItems: MenuItemModel[] = [
   { name: 'Modals', icon: 'copy-outline', screenName: ScreenNames.Modal },
   { name: 'Infinite Scroll', icon: 'download-outline', screenName: ScreenNames.Scroll },
   { name: 'Slides', icon: 'ellipsis-horizontal-circle-outline', screenName: ScreenNames.Slides },
+  { name: 'Theme', icon: 'flask-outline', screenName: ScreenNames.ChangeTheme },
 ];

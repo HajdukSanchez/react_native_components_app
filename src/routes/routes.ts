@@ -10,6 +10,7 @@ const ScreenNames = {
   Modal: 'ModalScreen',
   Scroll: 'ScrollScreen',
   Slides: 'SlideScreen',
+  ChangeTheme: 'ChangeThemeScreen',
 };
 
 export { ScreenNames };

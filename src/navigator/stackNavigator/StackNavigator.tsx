@@ -7,6 +7,7 @@ import {
   AlertScreen,
   Animation101Screen,
   Animation102Screen,
+  ChangeThemeScreen,
   HomeScreen,
   ModalScreen,
   PullToRefreshScreen,
@@ -29,6 +30,7 @@ const StackNavigator = () => {
       <Screen name={ScreenNames.Switch} component={SwitchScreen} />
       <Screen name={ScreenNames.Scroll} component={ScrollScreen} />
       <Screen name={ScreenNames.TextInput} component={TextInputScreen} />
+      <Screen name={ScreenNames.ChangeTheme} component={ChangeThemeScreen} />
       <Screen name={ScreenNames.SectionList} component={SectionListScreen} />
       <Screen name={ScreenNames.Animation101} component={Animation101Screen} />
       <Screen name={ScreenNames.Animation102} component={Animation102Screen} />
