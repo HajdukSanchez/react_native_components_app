@@ -1,4 +1,4 @@
-import { MenuItemModel } from '../models/MenuItem.model';
+import { MenuItemModel } from '../models/menuItem.model';
 import { ScreenNames } from '../routes/routes';
 
 export const menuItems: MenuItemModel[] = [

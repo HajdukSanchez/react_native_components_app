@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
 
 import { styles } from './MenuItem.styles';
-import { MenuItemModel } from '../../models/MenuItem.model';
+import { MenuItemModel } from '../../models/menuItem.model';
 
 interface MenuItemProps {
   menuItem: MenuItemModel;
