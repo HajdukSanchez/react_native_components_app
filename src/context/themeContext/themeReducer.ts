@@ -1,36 +1,14 @@
-import { Theme } from '@react-navigation/native';
+import { darkTheme, lightTheme } from '../../theme';
+import { ThemeActionType, ThemeState } from '../../models/theme.model';
 
-type ThemeAction = { type: 'setLightTheme' } | { type: 'setDarkTheme' };
-export interface ThemeState extends Theme {
-  currentTheme: 'light' | 'dark';
-  dividerColor: string;
-}
+type ThemeAction = { type: ThemeActionType.SET_LIGHT_THEME } | { type: ThemeActionType.SET_DARK_THEME };
 
-interface ThemeReducerProps {
-  state: ThemeState;
-  action: ThemeAction;
-}
-
-const lightTheme: ThemeState = {
-  dark: false,
-  currentTheme: 'light',
-  dividerColor: 'rgba(0,0,0,0.7)',
-  colors: {
-    primary: 'red',
-    background: 'blue',
-    card: 'green',
-    text: 'pink',
-    border: 'orange',
-    notification: 'teal',
-  },
-};
-
-export const themeReducer = ({ state, action }: ThemeReducerProps): ThemeState => {
+export const themeReducer = (state: ThemeState, action: ThemeAction): ThemeState => {
   switch (action.type) {
-    case 'setLightTheme':
+    case ThemeActionType.SET_LIGHT_THEME:
       return { ...lightTheme };
-    case 'setDarkTheme':
-      return { ...lightTheme };
+    case ThemeActionType.SET_DARK_THEME:
+      return { ...darkTheme };
     default:
       return state;
   }
