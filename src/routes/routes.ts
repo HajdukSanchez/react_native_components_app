@@ -9,6 +9,7 @@ const ScreenNames = {
   SectionList: 'SectionListScreen',
   Modal: 'ModalScreen',
   Scroll: 'ScrollScreen',
+  Slides: 'SlideScreen',
 };
 
 export { ScreenNames };

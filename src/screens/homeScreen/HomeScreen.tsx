@@ -2,7 +2,7 @@ import React from 'react';
 import { View, FlatList } from 'react-native';
 
 import { styles } from './HomeScreen.styles';
-import { menuItems } from '../../data/menuItems';
+import { menuItems } from '../../data/menuItems.data';
 import { HeaderTitle, MenuItem } from '../../components';
 import { MenuItemModel } from '../../models/MenuItem.model';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { SectionList, View, Text } from 'react-native';
 
-import { houses } from '../../data/sections';
+import { houses } from '../../data/sections.data';
 import { HeaderTitle } from '../../components';
 import { styles } from './SectionListScreen.styles';
 

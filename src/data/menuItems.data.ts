@@ -11,4 +11,5 @@ export const menuItems: MenuItemModel[] = [
   { name: 'Section List', icon: 'list-outline', screenName: ScreenNames.SectionList },
   { name: 'Modals', icon: 'copy-outline', screenName: ScreenNames.Modal },
   { name: 'Infinite Scroll', icon: 'download-outline', screenName: ScreenNames.Scroll },
+  { name: 'Slides', icon: 'ellipsis-horizontal-circle-outline', screenName: ScreenNames.Slides },
 ];

@@ -1,4 +1,5 @@
 export { HomeScreen } from './homeScreen/HomeScreen';
+export { SlideScreen } from './slideScreen/SlideScreen';
 export { ModalScreen } from './modalScreen/ModalScreen';
 export { AlertScreen } from './alertScreen/AlertScreen';
 export { ScrollScreen } from './scrollScreen/ScrollScreen';

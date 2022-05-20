@@ -15,8 +15,6 @@ const FadeInImage = ({ uri, imageStyle = {}, viewStyle = {}, loadingColor }: Fad
   const [isLoading, setIsLoading] = useState(true);
   const { fadeIn, opacity } = useAnimation();
 
-  console.log(imageStyle);
-
   const handleLoadEnd = () => {
     setIsLoading(false);
     fadeIn(500);
