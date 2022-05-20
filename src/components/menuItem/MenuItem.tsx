@@ -27,7 +27,7 @@ const MenuItem = ({ menuItem: { icon, name, screenName } }: MenuItemProps) => {
       <View style={styles.container}>
         <View style={styles.information}>
           <Icon name={icon} size={30} color={colors.primary} />
-          <Text style={styles.text}>{name}</Text>
+          <Text style={{...styles.text, color: colors.text}}>{name}</Text>
         </View>
         <View>
           <Icon name="chevron-forward-outline" size={30} color={colors.primary} />

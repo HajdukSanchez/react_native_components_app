@@ -16,7 +16,6 @@ export const styles = StyleSheet.create({
     marginVertical: 10,
     marginLeft: 20,
     borderLeftWidth: 4,
-    borderLeftColor: 'grey',
   },
   sectionItemText: {
     ...globalStyles.text,

@@ -5,10 +5,10 @@ export const lightTheme: ThemeState = {
   currentTheme: ThemeType.LIGHT,
   dividerColor: 'rgba(0,0,0,0.7)',
   colors: {
-    primary: 'red',
-    background: 'blue',
+    primary: '#084F6A',
+    background: 'rgba(255, 248, 241, 0.8)',
     card: 'green',
-    text: 'pink',
+    text: 'black',
     border: 'orange',
     notification: 'teal',
   },

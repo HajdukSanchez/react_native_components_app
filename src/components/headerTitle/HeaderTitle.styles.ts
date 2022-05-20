@@ -5,7 +5,6 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
   },
   headerText: {
-    color: 'black',
     fontSize: 35,
     fontWeight: 'bold',
   },

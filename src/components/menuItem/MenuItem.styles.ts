@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
   },
   text: {
     marginLeft: 10,
-    color: 'black',
     fontSize: 20,
   },
 });

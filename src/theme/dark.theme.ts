@@ -5,10 +5,10 @@ export const darkTheme: ThemeState = {
   currentTheme: ThemeType.DARK,
   dividerColor: 'rgba(0,0,0,0.7)',
   colors: {
-    primary: 'red',
-    background: 'blue',
+    primary: '#75CEDB',
+    background: 'rgba(54, 54, 54, 0.8)',
     card: 'green',
-    text: 'pink',
+    text: 'white',
     border: 'orange',
     notification: 'teal',
   },

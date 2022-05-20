@@ -1,10 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import { Animated, PanResponder, View } from 'react-native';
+import { ThemeContext } from '../../context/themeContext/ThemeContext';
 
 import { styles } from './Animation102Screen.styles';
 
 const Animation102Screen = () => {
   const pan = useRef(new Animated.ValueXY()).current;
+  const {
+    theme: { colors },
+  } = useContext(ThemeContext);
 
   const panResponder = useRef(
     PanResponder.create({
@@ -40,6 +44,7 @@ const Animation102Screen = () => {
           {
             transform: pan.getTranslateTransform(),
           },
+          { backgroundColor: colors.primary },
         ]}
         {...panResponder.panHandlers}
       />

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View, FlatList } from 'react-native';
 
 import { styles } from './HomeScreen.styles';
 import { menuItems } from '../../data/menuItems.data';
 import { HeaderTitle, MenuItem } from '../../components';
 import { MenuItemModel } from '../../models/menuItem.model';
+import { ThemeContext } from '../../context/themeContext/ThemeContext';
 
 const HomeScreen = () => {
   return (
@@ -20,6 +21,11 @@ const HomeScreen = () => {
   );
 };
 
-const _ItemSeparator = () => <View style={styles.itemSeparator} />;
+const _ItemSeparator = () => {
+  const {
+    theme: { dividerColor },
+  } = useContext(ThemeContext);
+  return <View style={{ ...styles.itemSeparator, borderColor: dividerColor }} />;
+};
 
 export { HomeScreen };

@@ -30,7 +30,6 @@ export const styles = StyleSheet.create({
   title: {
     marginBottom: 10,
     fontSize: 30,
-    color: '#5856D6',
     fontWeight: 'bold',
   },
   description: {
@@ -42,13 +41,11 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#5856D6',
     paddingVertical: 10,
     paddingHorizontal: 20,
   },
   buttonText: {
-		fontSize: 20,
-		marginRight: 10,
-    color: 'white',
+    fontSize: 20,
+    marginRight: 10,
   },
 });
